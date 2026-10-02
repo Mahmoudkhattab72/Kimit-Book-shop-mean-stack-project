@@ -7,9 +7,12 @@ import { Observable } from 'rxjs/internal/Observable';
 })
 export class LoginService {
   constructor(private httpClient:HttpClient) {}
-  add(login:any){
-    return this.httpClient.post("http://localhost:3000/login", login)
-  }
+  add(login: any) {
+  return this.httpClient.post("http://localhost:3000/client/login", {
+    email: login.loginEmailFormControl,
+    password: login.loginPasswordFormControl,
+  });
+}
   getData(){
     return this.httpClient.get('http://localhost:3000/login')
     }

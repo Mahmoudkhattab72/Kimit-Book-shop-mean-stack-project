@@ -100,27 +100,39 @@ onSubmitOrUpdatesignup(){
     this.signupFormGroup.controls.signupCityFormControl.setValue(
       this.signup.signupCityFormControl
     );
-   (this.signupFormGroup as FormGroup).addControl('id', new FormGroup(signupId));
-    
-});}
+    // Cast to the untyped FormGroup so a control named 'id' can be added
+(this.signupFormGroup as FormGroup).addControl('id', new FormControl(signupId));
+  });
+}
+
 login: any;
+
 onCreateLogin(): void {
-    console.log('onCreateLogin');
-    console.log(this.loginFormGroup.value);
-    this.loginService.add(this.loginFormGroup.value).subscribe((res)=>{
-      console.log('res ::', res);
-    });}
-    loginUser(loginEmailFormControl: string, loginPasswordFormControl: string): void {
-    this.loginService.checkClient(loginEmailFormControl, loginPasswordFormControl).subscribe(
-      (res) => {
-        if (res.length > 0) {
-          console.log('User found! Data:', res[0]);
-        } else {
-          console.log('Invalid credentials. No user found.');
-        }
-      },
-      (error) => {
-        console.error('An error occurred:', error);
-      });}
+  console.log('onCreateLogin');
+  console.log(this.loginFormGroup.value);
+  this.loginService.add(this.loginFormGroup.value).subscribe({
+    next: (res: any) => {
+      localStorage.setItem('token', res.token);
+      console.log('Login succeeded');
+    },
+    error: (err) => {
+      console.log('Login failed ::', err.error.message);
+    },
+  });
+}
+
+loginUser(loginEmailFormControl: string, loginPasswordFormControl: string): void {
+  this.loginService.checkClient(loginEmailFormControl, loginPasswordFormControl).subscribe(
+    (res) => {
+      if (res.length > 0) {
+        console.log('User found! Data:', res[0]);
+      } else {
+        console.log('Invalid credentials. No user found.');
+      }
+    },
+    (error) => {
+      console.error('An error occurred:', error);
     }
-  
+  );
+}
+}
