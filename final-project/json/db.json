@@ -1,0 +1,142 @@
+{
+  "signup": [
+    {
+      "id": "96bc",
+      "signupNameFormControl": "ahmed",
+      "signupEmailFormControl": "ahmed@yahoo.com",
+      "signupPasswordFormControl": "123456789",
+      "signupCityFormControl": "egypt",
+      "signupAddressFormControl": "asdaskllknmnas"
+    },
+    {
+      "id": "cbac",
+      "signupNameFormControl": "noura",
+      "signupEmailFormControl": "noura@gmail.com",
+      "signupPasswordFormControl": "1182000",
+      "signupCityFormControl": "egypt",
+      "signupAddressFormControl": "10 downtown st"
+    },
+    {
+      "id": "8ef3",
+      "signupNameFormControl": "amr",
+      "signupEmailFormControl": "amr@gmail.com",
+      "signupPasswordFormControl": "15975364285",
+      "signupCityFormControl": "cairo",
+      "signupAddressFormControl": "13 naser city"
+    }
+  ],
+  "login": [
+    {
+      "id": "a720",
+      "loginEmailFormControl": "noura@gmail.com",
+      "loginPasswordFormControl": "123456789"
+    },
+    {
+      "id": "02d3",
+      "loginEmailFormControl": "amr@gmail.com",
+      "loginPasswordFormControl": "145236789"
+    },
+    {
+      "id": "663b",
+      "loginEmailFormControl": "noura@gmail.com",
+      "loginPasswordFormControl": "123456789"
+    },
+    {
+      "id": "bfc4",
+      "loginEmailFormControl": "amr@gmail.com",
+      "loginPasswordFormControl": "2030604050"
+    },
+    {
+      "id": "7694",
+      "loginEmailFormControl": "noura@gmail.com",
+      "loginPasswordFormControl": "123456789"
+    },
+    {
+      "id": "ceb6",
+      "loginEmailFormControl": "ahmed@yahoo.com",
+      "loginPasswordFormControl": "123456789"
+    },
+    {
+      "id": "1b37",
+      "loginEmailFormControl": "ahmed@yahoo.com",
+      "loginPasswordFormControl": "230456"
+    }
+  ],
+  "Book": [
+    {
+      "id": "ef22",
+      "bookImageFormControl": "https://files.dreame.com/images/2020/11/13/13271492174914887685fae33a51a021.png@300w_424h_2e_49614688061a.webp",
+      "bookNameFormControl": "Cruel Love",
+      "bookCategoryFormControl": "Romantic",
+      "bookPriceFormControl": 34
+    },
+    {
+      "id": "2484",
+      "bookImageFormControl": "https://files.dreame.com/images/2020/11/13/13271492174914887685fae33a51a021.png@300w_424h_2e_49614688061a.webp",
+      "bookNameFormControl": "Cruel Love",
+      "bookCategoryFormControl": "Romantic",
+      "bookPriceFormControl": 34
+    },
+    {
+      "id": "c167",
+      "bookImageFormControl": "https://files.dreame.com/images/2020/11/13/13271492174914887685fae33a51a021.png@300w_424h_2e_49614688061a.webp",
+      "bookNameFormControl": "Cruel Love",
+      "bookCategoryFormControl": "Romantic",
+      "bookPriceFormControl": 34
+    },
+    {
+      "id": "1c48",
+      "bookImageFormControl": "https://files.dreame.com/images/2020/11/13/13271492174914887685fae33a51a021.png@300w_424h_2e_49614688061a.webp",
+      "bookNameFormControl": "Cruel Love",
+      "bookCategoryFormControl": "Romantic",
+      "bookPriceFormControl": 34
+    },
+    {
+      "id": "1dfa",
+      "bookImageFormControl": "https://files.dreame.com/images/2020/11/13/13271492174914887685fae33a51a021.png@300w_424h_2e_49614688061a.webp",
+      "bookNameFormControl": "Cruel Love",
+      "bookCategoryFormControl": "Romantic",
+      "bookPriceFormControl": 34
+    },
+    {
+      "id": "2f4c",
+      "bookImageFormControl": "https://files.dreame.com/images/2020/11/13/13271492174914887685fae33a51a021.png@300w_424h_2e_49614688061a.webp",
+      "bookNameFormControl": "Cruel Love",
+      "bookCategoryFormControl": "Romantic",
+      "bookPriceFormControl": 34
+    },
+    {
+      "id": "954b",
+      "bookImageFormControl": "https://files.dreame.com/images/2020/11/13/13271492174914887685fae33a51a021.png@300w_424h_2e_49614688061a.webp",
+      "bookNameFormControl": "Cruel Love",
+      "bookCategoryFormControl": "Romantic",
+      "bookPriceFormControl": 34
+    }
+  ],
+  "contact": [
+    {
+      "id": "2acd",
+      "contactNameFormControl": "ahmed khattab",
+      "contactEmailFormControl": "ahmed@yahoo.com",
+      "contactSubjectFormControl": "math",
+      "contactDepartmentControl": "1",
+      "contactQuestionFormControl": "3rd prep."
+    },
+    {
+      "id": "56d6",
+      "contactNameFormControl": "ahmed khattab",
+      "contactEmailFormControl": "ahmed@yahoo.com",
+      "contactSubjectFormControl": "math",
+      "contactDepartmentControl": "Business Department",
+      "contactQuestionFormControl": "3rd prep."
+    },
+    {
+      "id": "f2d2",
+      "contactNameFormControl": "ahmed khattab",
+      "contactEmailFormControl": "ahmed@yahoo.com",
+      "contactSubjectFormControl": "math",
+      "contactDepartmentControl": "Personal Department",
+      "contactQuestionFormControl": "3rd prep."
+    }
+  ]
+}

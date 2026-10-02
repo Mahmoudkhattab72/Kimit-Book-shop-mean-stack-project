@@ -1,33 +1,28 @@
-const mongoDB = require("mongodb");
-const MongoClient = mongoDB.MongoClient;
-const url = "mongodb://127.0.0.1:27017/"
-const connection = new MongoClient(url);
-const db = connection.db("kimit-e-commerce-app");
-const usersCollection = db.collection("users");
+const { ObjectId } = require("mongodb");
+const { getDb, COLLECTIONS } = require("../config/db");
 
-const select = async() => {
-    const userCart = await usersCollection.aggregate([
-        {
-    $lookup:{
-      from: "products",
-      localField:"cart",
-      foreignField: "_id",
-      as:"products"
-    }
-},
-  {
-    $project: {
-      cart:false
-    }
-  },{
-  $limit: 4
-  },
-  {
-    $sort: {
-      name: 1
-    }
-  }
-    ]).toArray()
-return userCart
-}
-module.exports = {select};
+// Returns one user with the full product documents of their cart,
+// or null if the user does not exist (or was deleted).
+// Assumes users.cart is an array of product _id values.
+const select = async (userId) => {
+  const result = await getDb()
+    .collection(COLLECTIONS.users)
+    .aggregate([
+      { $match: { _id: new ObjectId(userId), isDeleted: { $ne: true } } },
+      {
+        $lookup: {
+          from: COLLECTIONS.products,
+          localField: "cart",
+          foreignField: "_id",
+          as: "products",
+        },
+      },
+      // Whitelist fields so the password hash is never returned
+      { $project: { name: 1, email: 1, imageName: 1, products: 1 } },
+    ])
+    .toArray();
+
+  return result[0] ?? null;
+};
+
+module.exports = { select };
